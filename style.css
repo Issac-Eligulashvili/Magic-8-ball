@@ -46,6 +46,9 @@
 .move {
     animation: shake 1.5s linear, move 1s linear 1.5s forwards;
 }
+.reset {
+    background-position-y: 0;
+}
 
 @keyframes shake {
     0% { transform: translate(4px, 4px) rotate(0deg); }

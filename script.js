@@ -1,4 +1,8 @@
 function shakeMagic8Ball() {
+  let eightBallDiv = document.querySelector('#response-image');
+  eightBallDiv.classList.remove('move');
+  eightBallDiv.classList.remove('one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight');
+
   const question = prompt('Ask the Magic 8-Ball a question:');
 
   if (question === null) {
@@ -15,7 +19,6 @@ function shakeMagic8Ball() {
   let randomNumber = Math.floor(Math.random() * 8);
 
   let answer;
-  let eightBallDiv = document.querySelector('#response-image');
 
   switch (randomNumber) {
     case 0:
