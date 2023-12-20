@@ -1,0 +1,68 @@
+.eight-ball {
+    height: 500px;
+    width: 500px;
+    clip-path: circle(50%);
+    background-size: cover;
+    background-image: url(eight-ball-faces/It\ is\ certain.jpg);
+}
+
+.eight-ball:before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 100%, #fff, rgba(255, 255, 255, 0) 50%);
+    filter: blur(5px);
+    z-index: 2;
+  }
+
+.one {
+    background-image: url(eight-ball-faces/It\ is\ certain.jpg);
+}
+.two {
+    background-image: url(eight-ball-faces/It\ is\ decidedly\ so.jpg);
+}
+.three {
+    background-image: url(eight-ball-faces/Reply\ hazy\ try\ again.jpg);
+}
+.four {
+    background-image: url(eight-ball-faces/do\ not\ count\ on\ it.jpg);
+}
+.five {
+    background-image: url(eight-ball-faces/CANNOT\ PREDICT\ NOW.jpg);
+}
+.six {
+    background-image: url(eight-ball-faces/My\ sources\ say\ no.jpg);
+}
+.seven {
+    background-image: url(eight-ball-faces/Outlook\ not\ so\ good.jpg);
+}
+.eight {
+    background-image: url(eight-ball-faces/Signs\ point\ to\ yes.jpg);
+}
+.move {
+    animation: shake 1.5s linear, move 1s linear 1.5s forwards;
+}
+
+@keyframes shake {
+    0% { transform: translate(4px, 4px) rotate(0deg); }
+    10% { transform: translate(-4px, -4px) rotate(-1deg); }
+    20% { transform: translate(-7px, 0px) rotate(1deg); }
+    30% { transform: translate(7px, 4px) rotate(0deg); }
+    40% { transform: translate(4px, -4px) rotate(1deg); }
+    50% { transform: translate(-4px, 4px) rotate(-1deg); }
+    60% { transform: translate(-7px, 4px) rotate(0deg); }
+    70% { transform: translate(7px, 4px) rotate(-1deg); }
+    80% { transform: translate(-4px, -4px) rotate(1deg); }
+    90% { transform: translate(4px, 4px) rotate(0deg); }
+    100% { transform: translate(4px, -4px) rotate(-1deg); }
+}
+
+@keyframes move {
+   100% {
+    background-position-y: 100%;
+   } 
+}

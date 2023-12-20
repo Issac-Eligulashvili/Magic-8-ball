@@ -1,48 +1,57 @@
 function shakeMagic8Ball() {
-    const question = prompt('Ask the Magic 8-Ball a question:');
+  const question = prompt('Ask the Magic 8-Ball a question:');
 
-    if (question === null) {
-        document.querySelector('#response-text').innerText = 'Please ask a question!'
-        document.querySelector('#response-text').classList = 'text-danger'
-        document.querySelector('#response-image').src = '#BAD/BROKENIMG'
-    }
+  if (question === null) {
+    document.querySelector('#response-text').innerText = 'Please ask a question!'
+    document.querySelector('#response-text').classList = 'text-danger'
+    document.querySelector('#response-image').src = '#BAD/BROKENIMG'
+  }
 
-    if (!question.trim()) {
-        alert('Please enter a valid question!')
-        return
-    }
+  if (!question.trim()) {
+    alert('Please enter a valid question!')
+    return
+  }
 
-    let randomNumber = Math.floor(Math.random() * 8);
+  let randomNumber = Math.floor(Math.random() * 8);
 
-    let answer, image, color;
+  let answer;
+  let eightBallDiv = document.querySelector('#response-image');
 
-    switch(randomNumber){
-        case 0 :
-          answer = 'It is certain'
-          break;
-        case 1 :
-          answer = 'It is decidedly so'
-          break;
-        case 2 :
-          answer = 'Reply hazy try again'
-          break;
-        case 3 :
-          answer = 'My sources say no'
-          break;
-        case 4 :
-          answer = 'Outlook not so good'
-          break;
-        case 5 :
-          answer = 'Signs point to yes'
-          break;
-        case 6 :
-          answer = 'It is certain'
-          break;
-        case 7 :
-          answer = 'It is certain'
-          break;  
-    }
+  switch (randomNumber) {
+    case 0:
+      answer = 'It is certain'
+      eightBallDiv.classList.add('one','move');
+      break;
+    case 1:
+      answer = 'It is decidedly so'
+      eightBallDiv.classList.add('two','move');
+      break;
+    case 2:
+      answer = 'Reply hazy try again'
+      eightBallDiv.classList.add('three','move');
+      break;
+    case 3:
+      answer = 'Do not count on it'
+      eightBallDiv.classList.add('four','move');
+      break;
+    case 4:
+      answer = 'Cannot Predict Now'
+      eightBallDiv.classList.add('five','move');
+      break;
+    case 5:
+      answer = 'My sources say no'
+      eightBallDiv.classList.add('six','move');
+      break;
+    case 6:
+      answer = 'Outllook not so good'
+      eightBallDiv.classList.add('seven','move');
+      break;
+    case 7:
+      answer = 'Signs point to yes'
+      eightBallDiv.classList.add('eight','move');
+      break;
+  }
 
-    const responseText = document.querySelector("#response-text")
-    responseText.innerText = answer;
+  const responseText = document.querySelector("#response-text")
+  responseText.innerText = answer;
 }
